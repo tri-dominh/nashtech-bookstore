@@ -46,5 +46,5 @@ export enum DateFormat {
   TIME_DATE = 'HH:mm:ss DD-MM-YYYY',
 }
 
-export const LOCALES_CURRENCY = 'us-EN';
-export const CURRENCY = 'VND';
+export const LOCALES_CURRENCY = 'en-US';
+export const CURRENCY = 'USD';

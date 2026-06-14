@@ -37,7 +37,7 @@ export class OrderViewController {
           ...order,
           createdAt: toDateTime(order.createdAt),
           updatedAt: toDateTime(order.updatedAt),
-          totalPrice: formatCurrency(order.totalPrice * 1000),
+          totalPrice: formatCurrency(order.totalPrice),
         };
       }),
     };
@@ -60,13 +60,13 @@ export class OrderViewController {
       ...order,
       createdAt: toDateTime(order.createdAt),
       updatedAt: toDateTime(order.updatedAt),
-      totalPrice: formatCurrency(order.totalPrice * 1000),
+      totalPrice: formatCurrency(order.totalPrice),
       items: order.items.map((item) => {
         return {
           ...item,
-          price: formatCurrency(item.price * 1000),
-          finalPrice: formatCurrency(item.finalPrice * 1000),
-          totalPrice: formatCurrency(item.totalPrice * 1000),
+          price: formatCurrency(item.price),
+          finalPrice: formatCurrency(item.finalPrice),
+          totalPrice: formatCurrency(item.totalPrice),
         };
       }),
       nextStatuses,

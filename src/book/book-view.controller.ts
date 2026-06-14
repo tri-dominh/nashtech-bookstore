@@ -83,8 +83,8 @@ export class BookViewController {
           ...book,
           createdAt: toDateTime(book.createdAt),
           updatedAt: toDateTime(book.updatedAt),
-          price: formatCurrency(book.price * 1000),
-          finalPrice: formatCurrency(book.finalPrice * 1000),
+          price: formatCurrency(book.price),
+          finalPrice: formatCurrency(book.finalPrice),
         };
       }),
       categories,
@@ -128,8 +128,8 @@ export class BookViewController {
       ...book,
       createdAt: toDateTime(book.createdAt),
       updatedAt: toDateTime(book.updatedAt),
-      price: formatCurrency(book.price * 1000),
-      finalPrice: formatCurrency(book.finalPrice * 1000),
+      price: formatCurrency(book.price),
+      finalPrice: formatCurrency(book.finalPrice),
       discountDate: toDateTime(book.discountDate),
       ratingReviews: {
         ...book.ratingReviews,

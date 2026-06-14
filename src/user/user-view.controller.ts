@@ -64,7 +64,7 @@ export class UserViewController {
           ...order,
           createdAt: toDateTime(order.createdAt),
           updatedAt: toDateTime(order.updatedAt),
-          totalPrice: formatCurrency(order.totalPrice * 1000),
+          totalPrice: formatCurrency(order.totalPrice),
         };
       }),
       ratingReviews: user.ratingReviews.map((ratingReview) => {
