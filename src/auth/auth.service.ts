@@ -131,7 +131,7 @@ export class AuthService {
     const payload: ITokenPayload = { sub, email };
     const token = await this.jwtService.signAsync(payload, {
       secret,
-      expiresIn,
+      expiresIn: expiresIn as unknown as number,
     });
 
     return token;

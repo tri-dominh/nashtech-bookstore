@@ -153,7 +153,7 @@ export class BookService {
     } catch (error) {
       console.log('Error:', error.message);
 
-      if (image && !imageUrls.length) await deleteFilesFromFirebase(imageUrls);
+      if (image && imageUrls.length) await deleteFilesFromFirebase(imageUrls);
 
       throw new BadRequestException({
         message: 'Failed to create book',
@@ -627,7 +627,7 @@ export class BookService {
     } catch (error) {
       console.log('Error:', error.message);
 
-      if (image && !imageUrls.length) await deleteFilesFromFirebase(imageUrls);
+      if (image && imageUrls.length) await deleteFilesFromFirebase(imageUrls);
 
       throw new BadRequestException({
         message: 'Failed to update book',

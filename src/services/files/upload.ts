@@ -33,8 +33,8 @@ export const uploadFilesFromFirebase = async (
 
           return `https://firebasestorage.googleapis.com/v0/b/${process.env.FIREBASE_PROJECT_ID}.appspot.com/o/${uploadFolder}%2F${filename}?alt=media`;
         } catch (error) {
-          // silent
-          return ``;
+          console.error('Firebase upload error:', error?.message || error);
+          throw error;
         }
       }),
     );
