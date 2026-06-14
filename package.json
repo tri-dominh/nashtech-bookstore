@@ -34,6 +34,7 @@
     "@nestjs/passport": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
     "@prisma/client": "^5.14.0",
+    "@supabase/supabase-js": "^2.108.1",
     "@types/connect-flash": "^0.0.40",
     "@types/express-session": "^1.18.0",
     "argon2": "^0.40.1",

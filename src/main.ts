@@ -8,8 +8,6 @@ import * as session from 'express-session';
 import * as passport from 'passport';
 import flash = require('connect-flash');
 
-import InitFirebase from './services/firebase';
-
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
@@ -39,8 +37,6 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
-
-  InitFirebase();
 
   const port = process.env.PORT || 8080;
   await app.listen(port);
